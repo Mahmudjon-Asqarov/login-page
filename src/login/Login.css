@@ -1,7 +1,8 @@
  :root {
      --login-background: #fff;
      --border: #eee;
-     --background-blue: #3333fd;
+     --background-blue: #0f0f92;
+     --background-active-blue: #3333fd;
  }
 
 
@@ -26,12 +27,18 @@
      background-color: var(--login-background);
  }
 
-.wrapper_login>p,h2 {
-    text-align: center;
-    margin-bottom: 8px;
+ .wrapper_login>p,
+ h2 {
+     text-align: center;
+     margin-bottom: 8px;
  }
- .wrapper_login>p{
+
+ .wrapper_login>p {
      color: #aaa;
+ }
+
+ form>button:active {
+     background-color: var(--background-active-blue);
  }
 
  .login_box {
