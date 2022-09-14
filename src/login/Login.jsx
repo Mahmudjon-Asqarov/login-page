@@ -11,7 +11,7 @@ function Login() {
     e.preventDefault();
   };
   return (
-    <div className="login_page">
+    <div className=" ">
       <div className="wrapper_login">
         <h2>Login</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
