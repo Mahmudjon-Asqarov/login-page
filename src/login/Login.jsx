@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Typed from "typed.js";
 import "./Login.css";
 function Login() {
   const [inputValue, setInputValue] = useState({
@@ -10,10 +11,35 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
   };
+
+  const title = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(title.current, {
+      strings: ["Login", "typed.js", "and", "tilt.js"], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 100,
+      backSpeed: 10,
+      backDelay: 100,
+      smartBackspace: true,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
-    <div className=" ">
+    <div className="">
       <div className="wrapper_login">
-        <h2>Login</h2>
+        <b>
+          this is &nbsp;
+          <span style={{ width: "100%" }} ref={title}></span>
+        </b>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div className="login_box">
           <form onSubmit={handleLogin}>
