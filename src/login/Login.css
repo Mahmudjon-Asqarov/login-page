@@ -1,0 +1,97 @@
+ :root {
+     --login-background: #fff;
+     --border: #eee;
+     --background-blue: #3333fd;
+ }
+
+
+ .login_page {
+     width: 100%;
+     height: 100vh;
+     color: #444;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #c0c0fd;
+ }
+
+ .wrapper_login {
+     width: 350px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     position: relative;
+     padding: 1rem .8rem;
+     border-radius: 16px;
+     background-color: var(--login-background);
+ }
+
+.wrapper_login>p,h2 {
+    text-align: center;
+    margin-bottom: 8px;
+ }
+ .wrapper_login>p{
+     color: #aaa;
+ }
+
+ .login_box {
+     top: 0;
+     left: 0;
+     width: 100%;
+     box-sizing: border-box;
+     border-radius: 10px;
+ }
+
+ .login_box .user_box {
+     position: relative;
+ }
+
+ .login_box .user_box input {
+     width: 100%;
+     padding: 10px 0;
+     font-size: 16px;
+     margin-bottom: 16px;
+     border: none;
+     outline: none;
+     border-radius: 4px;
+     text-indent: 12px;
+     border: 1px solid var(--border);
+     background: transparent;
+ }
+
+ .login_box .user_box label {
+     position: absolute;
+     top: 2px;
+     left: 12px;
+     padding: 10px 0;
+     font-size: 14px;
+     color: #333;
+     pointer-events: none;
+     transition: .2s linear;
+ }
+
+ .login_box .user_box input:focus~label,
+ .login_box .user_box input:valid~label {
+     top: -5px;
+     left: 5px;
+     color: var(--background-blue);
+     background-color: var(--login-background);
+     padding: 0 4px;
+     font-size: 11px;
+ }
+
+ .login_box .user_box input:focus {
+     border: 1px solid var(--background-blue);
+ }
+
+ .ligin_btn {
+     width: 100%;
+     padding: 10px 0;
+     font-size: 16px;
+     border: none;
+     border-radius: 4px;
+     color: #fff;
+     background-color: var(--background-blue);
+     cursor: pointer;
+     margin-bottom: 12px;
+ }
