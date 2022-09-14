@@ -15,7 +15,7 @@ function Login() {
   const title = useRef(null);
   useEffect(() => {
     const typed = new Typed(title.current, {
-      strings: ["Login", "typed.js", "and", "tilt.js"], // Strings to display
+      strings: ["Login", "typed.js", "tilt.js"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 100,
@@ -37,7 +37,7 @@ function Login() {
     <div className="">
       <div className="wrapper_login">
         <b>
-          this is &nbsp;
+          This is &nbsp;
           <span style={{ width: "100%" }} ref={title}></span>
         </b>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
